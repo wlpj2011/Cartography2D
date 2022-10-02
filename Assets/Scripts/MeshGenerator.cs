@@ -27,6 +27,13 @@ public class MeshGenerator : MonoBehaviour
         mesh.RecalculateNormals();
     }
 
+    public void GenerateMeshCollider() {
+        MeshCollider meshCollider = new MeshCollider();
+        meshCollider = GetComponent<MeshCollider>();
+        meshCollider.sharedMesh = null;
+        meshCollider.sharedMesh = GetComponent<MeshFilter>().mesh;
+    }
+
     void TriangulateSquare(Square square) {
         switch (square.configuration) {
             // 0 points
@@ -161,7 +168,7 @@ public class MeshGenerator : MonoBehaviour
             ControlNode[,] controlNodes = new ControlNode[nodeCountX,nodeCountY];
             for (int x = 0; x < nodeCountX; x++) {
                 for (int y = 0; y < nodeCountY; y++) {
-                    Vector3 pos = new Vector3(-mapWidth / 2 + x * squareSize + squareSize / 2, 0, - mapHeight / 2 + y * squareSize + squareSize / 2);
+                    Vector3 pos = new Vector3(-mapWidth / 2 + x * squareSize + squareSize / 2, - mapHeight / 2 + y * squareSize + squareSize / 2,0);
                     controlNodes[x, y] = new ControlNode(pos, map[x, y] == 1, squareSize);
                 }
             }

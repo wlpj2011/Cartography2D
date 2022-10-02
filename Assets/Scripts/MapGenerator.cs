@@ -57,13 +57,14 @@ public class MapGenerator : MonoBehaviour
                 }
                 else {
                     borderedMap[x, y] = 1;
-                    Debug.Log("Bordering");
+                    //Debug.Log("Bordering");
                 }
             }
         }
 
         MeshGenerator meshGen = GetComponent<MeshGenerator>();
         meshGen.GenerateMesh(borderedMap, 1);
+        meshGen.GenerateMeshCollider();
     }
 
     void RandomFillMap(){
@@ -106,7 +107,7 @@ public class MapGenerator : MonoBehaviour
             }
         }
         map = newMap;
-        Debug.Log("Map Smoothed");
+        //Debug.Log("Map Smoothed");
     }
 
     void FillMapHoles() {

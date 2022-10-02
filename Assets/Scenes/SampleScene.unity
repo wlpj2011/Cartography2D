@@ -163,7 +163,7 @@ MonoBehaviour:
   minNeighboursToFill: 6
   clearingLevels: 2
   maxNeighboursToClear: 0
-  seed: 26.83135
+  seed: 72.00758
   useRandomSeed: 0
 --- !u!4 &91645241
 Transform:
@@ -260,7 +260,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &217325237
 Rigidbody2D:
   serializedVersion: 4
@@ -289,7 +289,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 217325236}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cc3a4884c26949d5af94c99a957dbb7, type: 3}
   m_Name: 
@@ -338,7 +338,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.38446015, g: 0.8490566, b: 0.23629406, a: 1}
   m_FlipX: 0
   m_FlipY: 0
