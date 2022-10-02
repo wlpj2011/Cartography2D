@@ -12,21 +12,16 @@ public class PlayerInput : MonoBehaviour
     /*
     * Set the player that is on the same gameObject as playerInput
     */
-        Debug.Log("Called Start for PlayerInput.cs" ,gameObject);
+        // Debug.Log("Called Start for PlayerInput.cs" ,gameObject);
         player = GetComponent<Player>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector2 directionalInput = new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical")); // Set the input equal to the raw axis input
+        // Set the input equal to the raw axis input
+        Vector2 directionalInput = new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical")); 
         // Debug.Log(directionalInput.ToString());
         player.SetDirectionalInput(directionalInput); // Store the input in the player
-        // if(Input.GetKeyDown(KeyCode.Space)) {
-        //     player.OnJumpInputDown(); // Tell the player the space key was preseed
-        // }
-        // if(Input.GetKeyUp(KeyCode.Space)) {
-        //     player.OnJumpInputUp(); // Tell the player the space key was released
-        // }
     }
 }
